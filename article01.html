@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
+    <title>md文件</title>
+    <style>
+        #sad {
+            background-color: bisque;
+            border-radius: 1vw;
+            border-width: 1.5vw;
+            border-color: pink;
+            margin-left: 5vw;
+            margin-right: 5vw;
+            margin-top: 2vw;
+        }
+
+        .bigground {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body class="bigground">
+    <div>
+        <div id="sad"></div>
+    </div>
+    <script src="./marked.min.js"></script>
+    <script>
+        // 1.创建ajax对象
+        let xhr = new XMLHttpRequest()
+        //2.调用open()，发起连接
+        xhr.open('GET', './article/1/article.md', true);
+        //3.调用send()，发送请求，如果是open()中是POST请求，请求体放在send()里
+        xhr.send();
+        //4.等待数据响应
+        xhr.onreadystatechange = function () {
+            console.log(xhr)
+            /*readyState 属性(请求状态)：
+            0 (初始化)还没有调用open()方法
+            1 (载入)已调用open()方法，尚未发送请求
+            2 (载入完成)send()方法完成，已发送请求
+            3 (解析)正在解析响应内容，先收到响应头
+            4 (解析完成)解析完成，收到响应体
+            */
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                document.getElementById('sad').innerHTML = marked.parse(xhr.responseText);
+            }
+        }
+    </script>
+</body>
+
+</html>
