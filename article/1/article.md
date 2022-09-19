@@ -45,7 +45,7 @@ ps:如果没有显示后缀名，就在文件管理器中把文件扩展名勾�
 
 在插件市场（即左侧往下数第五个图标），在搜索栏处搜索Chinese+
 
-<img src="./article/1/02.png" width="500vw" height="600vw"/>
+<img src="./article/1/02.png" width="5000vw" height="5000vw"/>
 
 选择第一个插件（中文简体）下载安装。重启vscode，这样页面就变成了中文了。
 
