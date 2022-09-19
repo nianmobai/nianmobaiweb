@@ -43,9 +43,9 @@ ps:如果没有显示后缀名，就在文件管理器中把文件扩展名勾�
 
 打开vscode后，会发现界面都是英文的，那我们就需要将其改成中文。
 
-在插件市场（即左侧往下数第五个图标），在搜索栏处搜索Chinese
+在插件市场（即左侧往下数第五个图标），在搜索栏处搜索Chinese+
 
-<img src="./article/1/02.png" width="50vw" height="60vw"/>
+<img src="./article/1/02.png" width="500vw" height="600vw"/>
 
 选择第一个插件（中文简体）下载安装。重启vscode，这样页面就变成了中文了。
 
